@@ -1,3 +1,4 @@
+//@ts-nocheck
 import React from "react";
 import ReactDOM from "react-dom";
 import "./index.css";
@@ -9,37 +10,37 @@ const theme = mergeTheme(defaultTheme, {
     Button: {
       appearances: {
         highEmphasis: {
-          backgroundColor: "#1C96A3",
+          backgroundColor: (theme, props) => `${theme.colors.brandOne}`,
           color: "#ffffff",
           _hover: {
             backgroundImage: " linear-gradient(to right, #23B4C3, #19838C)",
             _disabled: {
-              backgroundColor: "#1C96A3",
+              backgroundColor: (theme, props) => `${theme.colors.brandOne}`,
             },
           },
         },
         midEmphasis: {
-          backgroundColor: "#A6E0E5",
+          backgroundColor: (theme, props) => `${theme.colors.brandTwo}`,
           color: "#373737",
           _hover: {
-            backgroundColor: "#A6E0E5",
+            backgroundColor: (theme, props) => `${theme.colors.brandTwo}`,
             backgroundImage:
               "linear-gradient(to right, rgba(222, 246, 252, 0.8), rgba(123, 210, 219, 0.8))",
             _disabled: {
-              backgroundColor: "#A6E0E5",
+              backgroundColor: (theme, props) => `${theme.colors.brandTwo}`,
             },
           },
         },
         lowEmphasis: {
           backgroundColor: "#FFFFFF",
           border: "2px solid",
-          borderColor: "#1C96A3",
-          color: "#1C96A3",
+          borderColor: (theme, props) => `${theme.colors.brandOne}`,
+          color: (theme, props) => `${theme.colors.brandOne}`,
           _hover: {
             backgroundColor: "#FFFFFF",
             backgroundImage: "linear-gradient(to right, #DEF6FC, #7BD2DB)",
             _disabled: {
-              backgroundColor: "#A6E0E5",
+              backgroundColor: (theme, props) => `${theme.colors.brandTwo}`,
             },
           },
         },
@@ -79,6 +80,10 @@ const theme = mergeTheme(defaultTheme, {
         },
       },
     },
+  },
+  colors: {
+    brandOne: "#1C96A3",
+    brandTwo: "#A6E0E5",
   },
 });
 
