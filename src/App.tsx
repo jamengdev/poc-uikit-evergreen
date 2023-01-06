@@ -1,10 +1,11 @@
 import "./App.css";
-import { Button, Pane, Text } from "evergreen-ui";
+import { Button, Heading, Pane, Text } from "evergreen-ui";
 import Plus from "./Icons/Plus";
 
 function App() {
   return (
     <Pane padding={16}>
+      <Heading is="h1">POC UI KIT EVERGREEN</Heading>
       <HighEmphasisButtons />
       <MidEmphasisButtons />
       <LowEmphasisButtons />
