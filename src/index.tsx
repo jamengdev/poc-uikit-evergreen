@@ -3,7 +3,7 @@ import ReactDOM from "react-dom";
 import "./index.css";
 import App from "./App";
 import { defaultTheme, mergeTheme, ThemeProvider } from "evergreen-ui";
-console.log("defaultTheme", defaultTheme);
+
 const theme = mergeTheme(defaultTheme, {
   components: {
     Button: {
