@@ -1,25 +1,143 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import "./App.css";
+import { Button, Pane, Text } from "evergreen-ui";
+import Plus from "./Icons/Plus";
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
+    <Pane padding={16}>
+      <HighEmphasisButtons />
+      <MidEmphasisButtons />
+      <LowEmphasisButtons />
+    </Pane>
+  );
+}
+
+function HighEmphasisButtons() {
+  return (
+    <>
+      <Text>High Emphasis with Icon</Text>
+      <Pane>
+        <Button
+          appearance="highEmphasis"
+          iconBefore={<Plus color="#FFF" width={16} height={16} />}
+          size="small"
+          margin={4}
         >
-          Learn React
-        </a>
-      </header>
-    </div>
+          Small
+        </Button>
+        <Button
+          appearance="highEmphasis"
+          iconBefore={<Plus color="#FFF" width={20} height={20} />}
+          size="medium"
+          margin={4}
+        >
+          Medium
+        </Button>
+        <Button
+          appearance="highEmphasis"
+          iconBefore={<Plus color="#FFF" width={24} height={24} />}
+          size="large"
+          margin={4}
+        >
+          Large
+        </Button>
+        <Button
+          appearance="highEmphasis"
+          iconBefore={<Plus color="#FFF" width={24} height={24} />}
+          size="large"
+          margin={4}
+          disabled={true}
+        >
+          Disabled
+        </Button>
+      </Pane>
+    </>
+  );
+}
+
+function MidEmphasisButtons() {
+  return (
+    <>
+      <Text>Mid Emphasis with Icon</Text>
+      <Pane columnGap={4}>
+        <Button
+          appearance="midEmphasis"
+          iconBefore={<Plus color="#1C96A3" width={16} height={16} />}
+          size="small"
+          margin={4}
+        >
+          Medium
+        </Button>
+        <Button
+          appearance="midEmphasis"
+          iconBefore={<Plus color="#1C96A3" width={20} height={20} />}
+          size="medium"
+          margin={4}
+        >
+          Medium
+        </Button>
+        <Button
+          appearance="midEmphasis"
+          iconBefore={<Plus color="#1C96A3" width={24} height={24} />}
+          size="large"
+          margin={4}
+        >
+          Large
+        </Button>
+        <Button
+          appearance="midEmphasis"
+          iconBefore={<Plus color="#1C96A3" width={24} height={24} />}
+          size="large"
+          margin={4}
+          disabled={true}
+        >
+          Large
+        </Button>
+      </Pane>
+    </>
+  );
+}
+
+function LowEmphasisButtons() {
+  return (
+    <>
+      <Text>Low Emphasis with Icon</Text>
+      <Pane>
+        <Button
+          appearance="lowEmphasis"
+          iconBefore={<Plus color="#1C96A3" width={16} height={16} />}
+          size="small"
+          margin={4}
+        >
+          Small
+        </Button>
+        <Button
+          appearance="lowEmphasis"
+          iconBefore={<Plus color="#1C96A3" width={20} height={20} />}
+          size="medium"
+          margin={4}
+        >
+          Medium
+        </Button>
+        <Button
+          appearance="lowEmphasis"
+          iconBefore={<Plus color="#1C96A3" width={24} height={24} />}
+          size="large"
+          margin={4}
+        >
+          Large
+        </Button>
+        <Button
+          appearance="lowEmphasis"
+          iconBefore={<Plus color="#1C96A3" width={24} height={24} />}
+          size="large"
+          margin={4}
+          disabled={true}
+        >
+          Large
+        </Button>
+      </Pane>
+    </>
   );
 }
 
